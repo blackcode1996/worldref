@@ -16,6 +16,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json());
 connectMongoose();
 
+//userRoutes
 app.use("/user", userRouter);
 app.use("/cardsData", authorization, cardsDataRoute);
 
