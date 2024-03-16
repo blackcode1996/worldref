@@ -10,7 +10,10 @@ import cardsDataRoute from './routes/cardsDataRoutes';
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin:'*',
+  methods: ["GET", "POST"],
+}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json());
