@@ -1,31 +1,33 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import Card from '../../component/Card';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import Card from "../../component/Card";
 
 interface UserData {
   name: string;
   email: string;
 }
 
-const Home: React.FC<{ userData?: UserData; token?: string | null }> = ({ userData, token }) => {
+const Home: React.FC<{ userData?: UserData; token?: string | null }> = () => {
   const [cardsData, setCardsData] = useState<any[]>([]);
+  const token = JSON.parse(localStorage.getItem("token") ?? "null");
+  const userData = JSON.parse(localStorage.getItem("userData") ?? "{}");
 
   useEffect(() => {
     if (token) {
-      axios.get('https://worldref-nine.vercel.app/cardsData', {
-        headers: {
-          Authorization: JSON.parse(token),
-        },
-      })
-        .then(response => {
+      axios
+        .get("https://worldref-nine.vercel.app/cardsData", {
+          headers: {
+            Authorization: token,
+          },
+        })
+        .then((response) => {
           setCardsData(response.data);
         })
-        .catch(error => {
-          console.error('Error fetching cards data:', error);
+        .catch((error) => {
+          console.error("Error fetching cards data:", error);
         });
     }
   }, [token]);
-
 
   return (
     <div className="container">

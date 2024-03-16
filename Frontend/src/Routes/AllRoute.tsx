@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Signup from "../Pages/Signup/Signup";
 import Login from "../Pages/Login/Login";
@@ -7,16 +7,6 @@ import Navbar from "../component/Navbar";
 import PrivateRoute from "./PrivateRoute";
 
 const AllRoute: React.FC = () => {
-  const [userData, setUserData] = useState<any>(null);
-  const [token, setToken] = useState<string | null>(null);
-
-  useEffect(() => {
-    const userData = localStorage.getItem("userData");
-    const token = localStorage.getItem("token");
-    setUserData(userData ? JSON.parse(userData) : null);
-    setToken(token);
-  }, []);
-
   return (
     <>
       <Navbar />
@@ -25,7 +15,7 @@ const AllRoute: React.FC = () => {
           path="/"
           element={
             <PrivateRoute>
-              <Home userData={userData} token={token} />
+              <Home />
             </PrivateRoute>
           }
         />
