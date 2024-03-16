@@ -12,7 +12,7 @@ const Home: React.FC<{ userData?: UserData; token?: string | null }> = ({ userDa
 
   useEffect(() => {
     if (token) {
-      axios.get('https://worldrefbackend-cel069hya-blackcode1996.vercel.app/cardsData', {
+      axios.get('https://worldref-nine.vercel.app/cardsData', {
         headers: {
           Authorization: JSON.parse(token),
         },
