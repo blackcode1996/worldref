@@ -46,7 +46,7 @@ const Signup: React.FC = () => {
     if (Object.keys(newErrors).length === 0) {
       setIsSubmitting(true); 
       try {
-        const response = await fetch("http://localhost:8080/user/register", {
+        const response = await fetch("https://worldrefbackend-cel069hya-blackcode1996.vercel.app/user/register", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
