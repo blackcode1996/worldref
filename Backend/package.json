@@ -2,11 +2,14 @@
   "name": "worldref_backend",
   "version": "1.0.0",
   "description": "Assigment of worldref",
-  "main": "server.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.ts",
-    "dev": "nodemon server.ts"
+    "start": "node index.ts",
+    "dev": "nodemon index.ts",
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist"
   },
   "repository": {
     "type": "git",
