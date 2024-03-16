@@ -6,10 +6,8 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ data }) => {
   if (!data) {
-    return null; // Render nothing if data is not provided
+    return null; 
   }
-
-  console.log("data", data);
 
   const cardStyle: React.CSSProperties = {
     margin: "10px",
@@ -38,6 +36,9 @@ const Card: React.FC<CardProps> = ({ data }) => {
           {data.title}
         </h5>
         <p className="card-text">{data.category}</p>
+      </div>
+      <div>
+        <img style={{height:"100px",width:"100px"}} src={data.image} alt="" />
       </div>
       <div className="card-footer" style={cardFooterStyle}>
         <button type="button" className="btn btn-primary" data-mdb-ripple-init>
