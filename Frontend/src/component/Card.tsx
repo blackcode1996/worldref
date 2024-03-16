@@ -38,7 +38,7 @@ const Card: React.FC<CardProps> = ({ data }) => {
         <p className="card-text">{data.category}</p>
       </div>
       <div>
-        <img style={{height:"100px",width:"100px"}} src={data.image} alt="" />
+        <img style={{height:"100px",width:"100px"}} src={data.image ? data.image : "https://cdn.dribbble.com/users/1787505/screenshots/7300251/shot.gif"} alt="" />
       </div>
       <div className="card-footer" style={cardFooterStyle}>
         <button type="button" className="btn btn-primary" data-mdb-ripple-init>
