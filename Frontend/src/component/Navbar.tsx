@@ -36,6 +36,17 @@ const Navbar: React.FC = () => {
             >
               Sign up for free
             </button>
+            <button
+              data-mdb-ripple-init
+              type="button"
+              className="btn btn-danger me-3"
+              onClick={() => {
+                localStorage.clear();
+                navigate("/login")
+              }}
+            >
+              Logout
+            </button>
           </div>
         </div>
       </div>
