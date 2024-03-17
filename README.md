@@ -62,7 +62,13 @@ npm i
 npm run dev
 ```
 
-Detailed documentation = https://www.notion.so/WorldRef-Assignment-01ac4dd6c570436185c50e79cdfcb11e?pvs=4
+## 📖 Documentaion:
 
-
-Backend request deocumentaion = https://documenter.getpostman.com/view/25625593/2sA2xnxVb5
+- Detailed documentation 
+```
+https://fancy-reason-497.notion.site/WorldRef-Assignment-01ac4dd6c570436185c50e79cdfcb11e
+```
+- Backend request documentation 
+```
+https://documenter.getpostman.com/view/25625593/2sA2xnxVb5
+```
